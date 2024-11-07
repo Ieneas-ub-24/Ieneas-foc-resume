@@ -3,42 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fancy JavaScript Calculator</title>
+    <title>Futuristic JavaScript Calculator</title>
     <style>
+        /* Body styling */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
             text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
+        /* Calculator table styling */
         table {
-            border: 2px solid #333;
-            margin: 50px auto;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: #f9f9f9;
+            border: 2px solid #00bcd4;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4);
         }
 
+        /* Input (result display) styling */
+        input[type="text"] {
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            text-align: right;
+            width: 260px;
+            background-color: #222;
+            color: #00bcd4;
+            box-shadow: 0 4px 6px rgba(0, 188, 212, 0.4);
+            margin-bottom: 15px;
+        }
+
+        /* Button styling */
         input[type="button"] {
             width: 80px;
-            padding: 15px;
-            margin: 5px;
-            font-size: 20px;
-            background-color: #4CAF50;
+            height: 80px;
+            margin: 8px;
+            font-size: 24px;
+            background: linear-gradient(135deg, #00bcd4, #00796b);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+            transition: all 0.3s ease;
         }
 
-        input[type="text"] {
-            padding: 15px;
-            font-size: 24px;
-            font-weight: bold;
-            border: 2px solid #333;
-            border-radius: 5px;
-            text-align: right;
-            width: 200px;
+        input[type="button"]:hover {
+            background: linear-gradient(135deg, #00bcd4, #ff4081);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5);
+        }
+
+        /* Special styles for operator and equal buttons */
+        input[type="button"].operator {
+            background-color: #ff4081;
+            box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+        }
+
+        input[type="button"].operator:hover {
+            background-color: #ff80ab;
+            transform: translateY(-5px);
+        }
+
+        /* Clear button styling */
+        input[type="button"].clear {
+            background: #ff1744;
+            box-shadow: 0 4px 10px rgba(255, 23, 68, 0.4);
+        }
+
+        input[type="button"].clear:hover {
+            background: #f50057;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            input[type="text"] {
+                width: 220px;
+                font-size: 24px;
+            }
+
+            input[type="button"] {
+                width: 70px;
+                height: 70px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -50,16 +109,16 @@
             <td colspan="4"><input type="text" id="result" readonly></td>
         </tr>
         <tr>
-            <td><input type="button" value="C" onclick="clr()"></td>
-            <td><input type="button" value="+" onclick="dis('+')"></td>
-            <td><input type="button" value="-" onclick="dis('-')"></td>
-            <td><input type="button" value="/" onclick="dis('/')"></td>
+            <td><input type="button" value="C" class="clear" onclick="clr()"></td>
+            <td><input type="button" value="+" class="operator" onclick="dis('+')"></td>
+            <td><input type="button" value="-" class="operator" onclick="dis('-')"></td>
+            <td><input type="button" value="/" class="operator" onclick="dis('/')"></td>
         </tr>
         <tr>
             <td><input type="button" value="7" onclick="dis('7')"></td>
             <td><input type="button" value="8" onclick="dis('8')"></td>
             <td><input type="button" value="9" onclick="dis('9')"></td>
-            <td><input type="button" value="*" onclick="dis('*')"></td>
+            <td><input type="button" value="*" class="operator" onclick="dis('*')"></td>
         </tr>
         <tr>
             <td><input type="button" value="4" onclick="dis('4')"></td>
@@ -71,7 +130,7 @@
             <td><input type="button" value="1" onclick="dis('1')"></td>
             <td><input type="button" value="2" onclick="dis('2')"></td>
             <td><input type="button" value="3" onclick="dis('3')"></td>
-            <td><input type="button" value="=" onclick="solve()"></td>
+            <td><input type="button" value="=" class="operator" onclick="solve()"></td>
         </tr>
         <tr>
             <td colspan="4"><input type="button" value="0" onclick="dis('0')"></td>
@@ -95,5 +154,6 @@
             document.getElementById("result").value = y;
         }
     </script>
+
 </body>
 </html>
