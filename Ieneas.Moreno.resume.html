@@ -5,99 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ieneas Moreno's Resume</title>
     <style>
+        /* General Body and Layout */
         body {
-            font-family: Times New Roman, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #bfc8cd; /* Satin grey background */
-            color: #333;
+            padding: 0;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #fff;
+            overflow-x: hidden;
         }
+
+        /* Header */
         h1 {
-            color: #007BFF;
             text-align: center;
-            margin-bottom: 20px;
+            font-size: 3em;
+            color: #00bcd4;
+            margin-top: 20px;
+            text-shadow: 0 4px 6px rgba(0, 188, 212, 0.4);
         }
+
+        /* Links */
         a {
             text-decoration: none;
-            color: #007BFF;
+            color: #00bcd4;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
+
         a:hover {
             text-decoration: underline;
+            color: #ff4081;
         }
-        img {
-            margin-left: 10px;
-            vertical-align: middle;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            max-width: 100%; /* Responsive image */
-            height: auto; /* Maintain aspect ratio */
-        }
+
+        /* Text Content */
         p {
-            margin-bottom: 15px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        table {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: white;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
             text-align: center;
+            max-width: 900px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            line-height: 1.8;
         }
+
+        /* Table Styling */
+        table {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
         th {
-            background-color: #007BFF;
+            background: linear-gradient(135deg, #00bcd4, #00796b);
             color: white;
+            border-radius: 10px;
         }
+
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background: rgba(255, 255, 255, 0.05);
         }
+
+        tr:hover {
+            background: rgba(0, 188, 212, 0.1);
+        }
+
+        /* Image styling */
+        img {
+            border-radius: 50%;
+            border: 3px solid #00bcd4;
+            box-shadow: 0 4px 6px rgba(0, 188, 212, 0.5);
+            max-width: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Button Styling */
         .button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ff4081, #00bcd4);
+            color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s;
+            font-size: 1.2em;
+            box-shadow: 0 10px 30px rgba(255, 64, 129, 0.4);
+            transition: background 0.3s, transform 0.3s;
         }
+
         .button:hover {
-            background-color: 
-</html>;
+            background: linear-gradient(135deg, #ff4081, #ff80ab);
+            transform: translateY(-5px);
         }
-        @media (max-width: 600px) {
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
             table {
-                font-size: 16px;
+                font-size: 0.9em;
+            }
+            .button {
+                font-size: 1.1em;
             }
             img {
-                width: 40px; /* Adjust image size for mobile */
+                max-width: 120px;
             }
         }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
 
 <h1>Ieneas Moreno</h1>
-<p> <a href="https://github.com/Ieneas-ub-24" target="_blank">github account</a></p>
+<p> <a href="https://github.com/Ieneas-ub-24" target="_blank">GitHub Profile</a></p>
+
 <p>
-    My name is Ieneas Moreno, and I am a student at the 
+    My name is Ieneas Moreno, and I am a student at the
     <a href="https://www.ub.edu.bz" target="_blank">University of Belize</a>.
     <img src="https://assets.onecompiler.app/42rx5rpy4/42u236w85/Screenshot%202024-10-03%20095459.png" alt="University of Belize Logo">
 </p>
 
 <p>
-    I am an associate student in the IT course. For my first semester, I am taking six classes: 
+    I am an associate student in the IT course. For my first semester, I am taking six classes:
     Fundamentals of Computing, Critical Thinking, Programming, English, Trigonometry, and Algebra.
     I've been living in Belmopan for over 14 years, while I was raised in Corozal for 3 years.
 </p>
@@ -106,25 +174,7 @@
     I chose to major in Information Technology mainly because I like dealing with computers, along with the vast demand in the field of technology, which also means better career opportunities.
 </p>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weekly Schedule</title>
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    th, td {
-        border: 1px solid black;
-        padding: 10px;
-        text-align: center;
-    }
-</style>
-</head>
-<body>
+<!-- Weekly Schedule Table -->
 <h1>Weekly Schedule</h1>
 <table>
     <tr>
@@ -205,9 +255,8 @@
         <td colspan="2">Rest Day</td>
     </tr>
 </table>
-</body>
-</html>
 
+<!-- Action Button -->
 <button class="button" onclick="window.location.href='calculator.html';">Go to Calculator</button>
 
 </body>
